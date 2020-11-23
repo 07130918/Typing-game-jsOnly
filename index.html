@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Typing-game</title>
+  <style>
+    #characters {
+      font-size: 2rem;
+    }
+
+    #typed {
+      color: red;
+    }
+  </style>
 </head>
+
 <body>
-  <script src="./index.js"></script>
+  <div id="time">00:00:00.00</div>
+  <input id="start" type="button" value="start">
+  <input id="stop" type="button" value="stop">
+  <input id="reset" type="button" value="reset">
+  
+  <div id="characters">
+    <span id="typed"></span><span id="untyped">Start</span>
+  </div>
+
+  <script type="module" src="./index.js"></script>
 </body>
+
 </html>
