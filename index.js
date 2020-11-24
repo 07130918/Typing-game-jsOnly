@@ -7,7 +7,7 @@ const reset = document.getElementById('reset')
 const typedField = document.getElementById('typed');
 const untypedField = document.getElementById('untyped');
 
-const time = 10000;
+// const time = 10000;
 // 経過時間(ミリ秒)
 let elapsed = 0;
 let intervalId = null;
@@ -64,7 +64,7 @@ start.addEventListener('click', function (e) {
 })
 
 stop.addEventListener('click', function () {
-  clearInterval(intervalId);
+  clearInterval(intervalId); //setIntervalを使用した動作のキャンセル
   intervalId = null; //start連打で何回もタイマーが裏で動作しないように
 })
 
