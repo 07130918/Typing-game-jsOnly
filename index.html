@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Typing-game</title>
   <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+    .center {
+      margin-top: 10vh;
+    }
     #characters {
       font-size: 2rem;
     }
@@ -13,23 +20,31 @@
     #typed {
       color: red;
     }
+
+    p {
+      font-size: 1.4rem;
+    }
   </style>
 </head>
 
 <body>
-  <div id="time">00:00:00.000</div>
-  <div>
-    <input id="start" type="button" value="start">
-    <!-- <input id="stop" type="button" value="stop"> -->
-    <input id="reset" type="button" value="reset">
+  <div class="center">
+    <div id="time">00:00:00.000</div>
+    <div>
+      <input id="start" type="button" value="start">
+      <input id="reset" type="button" value="reset">
+    </div>
+    <div id="characters">
+      <span id="typed"></span><span id="untyped">Startボタンを押すと始まるよ</span>
+    </div>
+    <p>挑戦する時間を選んでね</p>
+    <div>
+      <input id="shortTime" type="button" value="10seconds">
+      <input id="midiumTime" type="button" value="20seconds">
+      <input id="longTime" type="button" value="30seconds">
+    </div>
+    <div id="result"></div>
   </div>
-
-  <div id="characters">
-    <span id="typed"></span><span id="untyped">Startボタンを押すと始まるよ</span>
-  </div>
-
-  <div id="result"></div>
-
   <script type="module" src="./index.js"></script>
 </body>
 
